@@ -220,7 +220,7 @@ distinct(df3)
 
 #sampling
 
-sample_frac(mtcars, 0.2, replace=F)
+sample_frac(mtcars, 0.2, replace=F) ---#replace F is given because specific rows picked need not be repeated
 
 sample_n(mtcars, 2, replace=F)
 

@@ -10,13 +10,13 @@ women
 
 plot(women)
 
-plot(women, type='p', pch=15, col='red')
+plot(women, type='p', pch=1, col='blue')
 
 plot(women, type='l')
 
 plot(women, type='b')
 
-plot(women, type='b', pch=18, lty=2, col=2)
+plot(women, type='b', pch=17, lty=2, col=2, lwd=4)
 
 plot(women, xlim=c(30,100), ylim=c(min(women$weight)-10, 200), pch=10)
 
@@ -35,9 +35,6 @@ title(main='Main Title', sub='Sub Title')
 plot(women)
 
 abline(lm(women$weight ~ women$height), col='red', lty=2, lwd=4)
-
-
-
 
 
 #boxplot
@@ -66,8 +63,6 @@ abline(h=quantile(women$height))
 
 text(1+.2, quantile(women$height), labels=c('min','1Q','median','3Q','max'))
 
-
-
 #histogram
 
 hist(women$height)
@@ -86,7 +81,7 @@ hist(x)
 
 
 
-hist(x, freq=F, col=1:5)
+hist(x, freq=F, col=1:10)
 
 lines(density(x))
 
@@ -110,7 +105,7 @@ x = c(10,20,40,50)
 
 pie(x)
 
-xlabels = c('A','B','C','D')
+xlabels = c('A%','B%','C%','D%')
 
 x/sum(x)
 
@@ -122,7 +117,7 @@ x
 
 #barplot
 
-barplot(x,col=1:4)
+barplot(x,col=1:6)
 
 barplot(x,col=1:4, horiz = T)
 
@@ -153,3 +148,4 @@ pairs(mtcars[1:4])
 options(digits=4)
 
 pairs(mtcars[c('mpg', 'wt','hp')])
+library(corrgram)
